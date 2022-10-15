@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tablehtml</title>
+</head>
+<body>
+    <input type="text" id="ip-name">
+    <input type="text" id="ip-sex">
+    <Button onclick="addValueInTable()">OK</Button>
+    <table id="table" border="1">
+        <th>
+            <td>Họ tên</td>
+            <td> giới tính</td>
+        </th>
+    </table>
+    <script>
+        function addValueInTable(){
+            let eTr=document.createElement('tr');
+            let name=document.getElementById('ip-name').value;
+            let sex=document.getElementById('ip-sex').value;
+            
+
+            eTr.innerHTML="<td>#</ts>";
+            eTr.innerHTML+="<td>"+name+"</td>";
+            eTr.innerHTML+="<td>"+sex+"</td>";
+           
+            document.getElementById('table').appendChild(eTr);
+
+        }
+
+    </script>
+    
+</body>
+</html>

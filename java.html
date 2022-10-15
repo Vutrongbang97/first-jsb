@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to do list</title>
+</head>
+
+<body>
+    <input type="text" id="val_list">
+    <button onclick="addlist()">Enter</button>
+    <div id="list"></div>
+    <script>
+
+        var todolist = [];
+        function addlist() {
+            document.getElementById('list').innerHTML = '';
+            let val_list = document.getElementById('val_list').value;
+            todolist.push(val_list);
+            for (let i = 0; i < todolist.length; i++) {
+                let ul_list = document.createElement('ul');
+                ul_list.innerHTML = '<li>' + todolist[i] + '</li>';
+                document.getElementById('list').appendChild(ul_list);
+            }
+            document.getElementById('val_list').value = '';
+        }
+    </script>
+</body>
+
+</html>
